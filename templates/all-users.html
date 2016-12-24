@@ -1,0 +1,15 @@
+<div>
+    <div class="button-bar">
+        <button class="button calm" ng-click="countminus()" ng-hide="counter == 0" ng-click="">
+            Previous
+        </button>
+        {{counter}}
+        <button class="button positive" ng-click="countplus()">
+            Next
+        </button>
+    </div>
+
+    <div>
+        <user-item ng-repeat="git in gits" class="list card col col-80 col-offset-10"> </user-item>
+    </div>
+</div>

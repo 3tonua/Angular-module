@@ -1,0 +1,8 @@
+<a ng-href="#/open-user/{{git.login}}" style="text-decoration: none">
+    <div class="item item-avatar">
+        <image ng-src="{{git.avatar_url}}"></image>
+        <h2>{{git.login}}</h2>
+        <p>{{git.html_url}}</p>
+        <p ng-if="git.site_admin" style="color: red">Admin</p>
+    </div>
+</a>

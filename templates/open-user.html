@@ -1,0 +1,16 @@
+<div class="list card">
+    <div class="item item-body">
+        <span style="display: inline-block;">
+            <image class="full-image" ng-src="{{ oneUser.avatar_url }}" style="height: 50%; width: 50%;"></image>
+        </span>
+        <span style="display: inline-block;">
+            <p>Login: {{ oneUser.login }}</p>
+            <p>Name: {{ oneUser.name }}</p>
+            <p>Email: {{ oneUser.email }}</p>
+            <p ng-show="oneUser.company">Company: {{ oneUser.company }}</p>
+            <p>Followers: {{  oneUser.followers }}</p>
+            <p>Date: {{ oneUser.created_at }}</p>
+            <p>{{ oneUser.html_url }}</p>
+        </span>
+    </div>
+</div>
