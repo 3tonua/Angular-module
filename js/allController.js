@@ -5,10 +5,7 @@ app.controller('allController', function ($scope, API) {
         $scope.gits = gits;
         console.log(gits[1]);
 
-        $scope.openOneUser = function () {
-
-        };
-
+        // Счетчик страниц
         $scope.countplus = function () {
             $scope.counter = $scope.counter + 30
         };

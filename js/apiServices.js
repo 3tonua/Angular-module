@@ -1,12 +1,13 @@
 app.service('API', function ($http, $q) {
     return {
         getAllUsers: function (params) {
+            console.log(params);
             var d = $q.defer();
             $http({
                 method: 'GET',
                 url: 'https://api.github.com/users',
                 params:{
-                    since: 0
+                    since: params
                 }
             }).then(function (data) {
                 var igits = data.data;
