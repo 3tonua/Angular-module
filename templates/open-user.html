@@ -6,7 +6,7 @@
         <span style="display: inline-block;">
             <p>Login: {{ oneUser.login }}</p>
             <p>Name: {{ oneUser.name }}</p>
-            <p>Email: {{ oneUser.email }}</p>
+            <p ng-show="oneUser.email">Email: {{ oneUser.email }}</p>
             <p ng-show="oneUser.company">Company: {{ oneUser.company }}</p>
             <p>Followers: {{  oneUser.followers }}</p>
             <p>Created date: {{ userDate }}</p>

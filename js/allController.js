@@ -5,7 +5,7 @@ app.controller('allController', function ($scope, API) {
         $scope.gits = gits;
         console.log(gits[1]);
 
-        // Счетчик страниц
+        // Счетчик для страниц
         $scope.countplus = function () {
             $scope.counter = $scope.counter + 30
         };

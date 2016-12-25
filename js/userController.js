@@ -3,12 +3,11 @@ app.controller('userController', function ($scope, $routeParams, API) {
         $scope.oneUser = data;
         console.log(data);
         console.log(data.created_at);
-        console.log(data.login);
 
         var username = $routeParams.username;
         console.log(username);
 
-        //Дата создания
+        //Дата создания аккаунта
         $scope.CreatedAt = data.created_at;
         var event = moment($scope.CreatedAt);
         console.log(event);
