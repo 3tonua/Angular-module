@@ -1,13 +1,15 @@
-app.controller('userController', function ($scope, API) {
-    API.getOneUser().then(function (data) {
+app.controller('userController', function ($scope, $routeParams, API) {
+    API.getOneUser($routeParams.username).then(function (data) {
         $scope.oneUser = data;
-        console.log(data);
-        console.log(data.created_at);
-        console.log(data.login);
-        var username = data.login;
+        // console.log(data);
+        // console.log(data.created_at);
+        // console.log(data.login);
+        //
+        var username = $routeParams.username;
         console.log(username);
-        $scope.username = data.login;
-        $scope.userUrl = 'https://api.github.com/users/' + username;
-        console.log($scope.userUrl);
+
+        // console.log($scope.username);
+        // $scope.userUrl = 'https://api.github.com/users/' + username;
+        // console.log($scope.userUrl);
     });
 });

@@ -16,19 +16,16 @@ app.service('API', function ($http, $q) {
             });
             return d.promise
         },
-        getOneUser: function (us) {
-
-            var url = 'https://api.github.com/users' + username;
+        getOneUser: function (username) {
+            var url = 'https://api.github.com/users/' + username;
             var u = $q.defer();
             $http({
                 method: 'GET',
                 url: url
-            }).then(function () {
-                var oneUser = data.data.login;
+            }).then(function (data) {
+                console.log(data);
+                var oneUser = data.data;
                 console.log(oneUser);
-
-                var username = us.data.login;
-                console.log(username);
 
                 u.resolve(oneUser)
             });
